@@ -10,9 +10,12 @@ System.Console.WriteLine("Введите второе число: ");
 double degree = Convert.ToInt32(Console.ReadLine());
 
 double Exp(double arg1, double arg2)
-
 {
-    double result = Math.Pow(arg1, arg2);
+    double result = 1;
+    for (int i = 1; i <= arg2; i++)
+    {
+        result = result * arg1;
+    }
     return result;
 }
 
