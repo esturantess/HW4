@@ -18,5 +18,3 @@ int Output(int[] array)
 
 int[] array = new int[8];
 Output(array);
-
-
