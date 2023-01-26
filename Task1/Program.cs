@@ -4,10 +4,26 @@
 //
 // 2, 4 -> 16
 
-System.Console.WriteLine("Введите первое число: ");
-double number = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine("Введите второе число: ");
-double degree = Convert.ToInt32(Console.ReadLine());
+int InputNumber(string str)
+{
+    int number;
+    string? text;
+    while (true)
+    {
+        Console.Write(str);
+        text = Console.ReadLine();
+        if (int.TryParse(text, out number))
+        {
+            break;
+        }
+
+        System.Console.WriteLine("Введено некорректное число, попробуйте ещё раз!");
+    }
+    return number;
+}
+
+double number = InputNumber("Введите первое число: ");
+double degree = InputNumber("Введите второе число: ");
 
 double Exp(double arg1, double arg2)
 {
